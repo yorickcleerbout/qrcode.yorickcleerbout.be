@@ -29,7 +29,8 @@
                 width: 300,
                 download: false,
                 logo: {
-                    src: "../assets/logo.png"
+                    src: "https://raw.githubusercontent.com/yorickcleerbout/yorickcleerbout.be/qrcode/src/assets/logo.png",
+                    logoSize: 0.2
                 }
             }).toImage();
         }
