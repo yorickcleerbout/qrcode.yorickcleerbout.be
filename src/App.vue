@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <HeroText :title="'QR Code Generator'" :subTitle="'Insert a link or text below to generate a QR Code'"/>
+    <LogicComponents :placeholder="'Insert link or text here...'" />
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeroText from './components/HeroText.vue'
+import LogicComponents from './components/LogicComponents.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeroText,
+    LogicComponents
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #3f3b49;
+}
+
+.container {
+  margin-top: 6%;
 }
 </style>
