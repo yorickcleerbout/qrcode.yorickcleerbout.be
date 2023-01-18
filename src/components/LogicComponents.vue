@@ -2,17 +2,37 @@
     <div class="container">
         <div class="items">
             <input type="text" id="input" :placeholder="placeholder" />
-            <button>Generate QR Code</button>
+            <button @click="generateQRCode">Generate QR Code</button>
         </div>
-        
+
+        <hr /> 
+
+        <canvas id="canvas"></canvas>
+
     </div>
   </template>
     
   <script>
+  import QrCodeWithLogo from "qrcode-with-logos";
   export default {
     name: 'LogicComponents',
     props: {
         placeholder: String
+    },
+    methods: {
+        generateQRCode() {
+            const content = document.getElementById('input').value;
+
+            new QrCodeWithLogo({
+                canvas: document.getElementById("canvas"),
+                content: content,
+                width: 300,
+                download: false,
+                logo: {
+                    src: "../assets/logo.png"
+                }
+            }).toImage();
+        }
     }
   }
   </script>
@@ -49,6 +69,18 @@
         border: 2px solid white;
         border-radius: 50px 50px 50px 50px;
         cursor: pointer;
+    }
+
+    hr {
+        margin-top: 5vh;
+        width: 70%;
+        margin: 5vh auto;
+    }
+
+    canvas {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50px 50px 50px 50px;
     }
   </style>
     
