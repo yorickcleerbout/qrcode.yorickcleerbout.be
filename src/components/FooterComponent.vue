@@ -25,13 +25,12 @@
       color: white;
       font-family: 'Roboto', sans-serif;
       background-color: #514f4f;
-      padding: 30px;
+      padding: 15px;
       text-transform: uppercase;
       font-weight: bold;
       font-style: italic;
-      position: relative;
-      bottom: 0;
       margin-top: auto;
+      width: 100%;
     }
 
     footer > a {
@@ -48,7 +47,8 @@
     svg{
         width: 25px;
         height: 25px;
-        margin: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
         background-color: #514f4f;
         fill: #db8ed1;
         cursor: pointer;
